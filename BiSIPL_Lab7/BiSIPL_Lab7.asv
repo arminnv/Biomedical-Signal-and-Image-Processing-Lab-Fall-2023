@@ -1,0 +1,10 @@
+close all;
+
+t1 = imread("S1_Q1_utils\t1.jpg");
+img = t1(:,:,1);
+figure;
+imshow(img);
+
+[X,Y] = ndgrid(1:1:256);
+c = 256/2;
+G = double((X-c).^2+(Y-c).^2<c^2);
